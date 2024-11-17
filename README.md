@@ -1,7 +1,3 @@
-Aqui está o README ajustado para o seu projeto de calculadora:
-
----
-
 <h1 align="center">Calculadora Interativa</h1>
 <br>
 
@@ -24,8 +20,11 @@ Este projeto consiste em uma aplicação Android que implementa uma calculadora 
 
 ## 🖼️ Layout
 
-O layout da calculadora foi cuidadosamente projetado para oferecer uma experiência visual intuitiva e agradável, com botões interativos e um display claro para a exibição de operações e resultados.
-![Mobile 1]()
+Abaixo estão imagens demonstrando o design e a funcionalidade da calculadora:
+
+### Exemplo de Operação
+<img src="https://github.com/Micael-Resende/Android-Calculator/blob/master/images/calculator.jpg" alt="Calculadora - Exemplo de Operação" width="300">
+
 ---
 
 ### 🎯 Funcionalidades
@@ -45,7 +44,3 @@ O código segue boas práticas de programação, com separação clara de respon
 ---
 
 Made by Micael Resende
-
----
-
-Se precisar adicionar capturas de tela ou um GIF demonstrando o funcionamento, me avise!
