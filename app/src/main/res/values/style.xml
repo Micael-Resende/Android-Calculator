@@ -1,0 +1,33 @@
+<resources>
+    <style name="CalcButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#4E4E4E</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="CalcButtonOperator" parent="CalcButton">
+        <item name="android:background">#FF9500</item>
+    </style>
+
+    <style name="CalcButtonEquals" parent="CalcButton">
+        <item name="android:background">#FF9500</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
+    <style name="CalculatorButtonCircular" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">@style/CircleButtonShape</item>
+        <item name="android:layout_width">1dp</item> <!-- Ajuste para um valor que funcione para você -->
+        <item name="android:layout_height">1dp</item> <!-- Deve ser o mesmo que layout_width -->
+    </style>
+
+    <style name="CircleButtonShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

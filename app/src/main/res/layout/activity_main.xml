@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+
+    <!-- Display da Calculadora -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="@string/_0"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Preview do Resultado -->
+    <TextView
+        android:id="@+id/tvPreview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplay" />
+
+    <!-- Layout dos botões -->
+    <GridLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPreview">
+
+    <!-- Botão C -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAC"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/ac"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+        <!-- Botão + / - -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBackspace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/backspace_description"
+            android:text=""
+            app:icon="@drawable/backspace"
+            app:iconGravity="textStart"
+            app:iconSize="36dp"
+            app:iconTint="@color/black"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPercent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/percent"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+        <!-- Botão Divisão -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/divide"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="304dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+        <!-- Botão 7 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_7"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <!-- Botão 8 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_8"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <!-- Botão 9 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_9"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <!-- Botão Multiplicação -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/x"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="304dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <!-- Botão 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_4"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="473dp" />
+
+        <!-- Botão 5 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_5"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="473dp" />
+
+        <!-- Botão 6 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_6"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="473dp" />
+
+        <!-- Botão Subtração -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMinus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/minus"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="304dp"
+            tools:layout_editor_absoluteY="473dp" />
+
+        <!-- Botão 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_1"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="557dp" />
+
+        <!-- Botão 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_2"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="557dp" />
+
+        <!-- Botão 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_3"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="557dp" />
+
+        <!-- Botão Soma -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPlus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/mais"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="304dp"
+            tools:layout_editor_absoluteY="557dp" />
+
+        <!-- Botão 0 ocupando duas colunas -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/_0"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="641dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonParentheses"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/parentheses"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="641dp" />
+
+        <!-- Botão Ponto -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDot"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/common"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="641dp" />
+
+        <!-- Botton Equal -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonEquals"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/equal"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="304dp"
+            tools:layout_editor_absoluteY="641dp" />
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
